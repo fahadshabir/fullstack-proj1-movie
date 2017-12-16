@@ -1,21 +1,16 @@
 import webbrowser
 
-#create a class
-#self is imp as it helps create instances 
 
 class Movie():
-   #CLASS Variable (used for all class objects)
-   #Google says define it in caps
-   #Use triple quotes for documentation
+   """ This class provides a way to store movie related information"""
 
-   #""" This class provides a way to store movie related information """
-   def __init__(self, movie_title, movie_storyline, poster_image,
-                 trailer_youtube):
+   def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):
+      """ constructor method ; self comes first """
       self.title = movie_title
       self.storyline = movie_storyline
       self.poster_image_url = poster_image
       self.trailer_youtube_url = trailer_youtube
-   
-   
+
    def show_trailer(self):
+      """ show trailer function """
       webbrowser.open(self.trailer_youtube_url)
